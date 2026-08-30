@@ -31,7 +31,7 @@ CHANNELS = {
 
 }
 
-pref_metadata = {
+PREF_METADATA = {
     'VACANCY_NAME': ["datanalyst", "analys", "datas", "scientist", "data scientist", "аналит", "разраб"],
     'GRADE': [
         "jun",
