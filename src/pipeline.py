@@ -3,6 +3,8 @@ from database import init_database, save_into_database, table_data
 from src.config import CHANNELS
 from metadata import metadata_from_messages
 import asyncio
+import re
+
 async def main():
     init_database()
 
