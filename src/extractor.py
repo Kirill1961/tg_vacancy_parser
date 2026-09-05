@@ -3,6 +3,9 @@ from src.config import CHANNELS, SESSION_NAME, API_ID, API_HASH, PREF_METADATA
 from prefect import flow, task
 from telethon import TelegramClient
 from metadata import dict_metadata
+from src.config import API_ID, API_HASH
+
+print(API_ID, ">>>>>>>>>>")
 
 client = TelegramClient(
     SESSION_NAME,
