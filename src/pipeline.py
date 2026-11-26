@@ -5,6 +5,7 @@ from metadata import metadata_from_messages
 import asyncio
 import re
 
+
 async def main():
     init_database()
 
@@ -25,7 +26,6 @@ async def main():
         # Вызов генератора
         async for message in extract_messages(chanel_link):
             num_msg += 1
-            # print(message)
 
             if isinstance(message.text, str):
                 # print(message.date.date())
@@ -43,24 +43,13 @@ async def main():
                         compar = comparison(message.id, words, date_metadata)
 
                         if compar:
-                            # dict_mdata[message.id] = compar
-                            #
-                            # print(dict_mdata[message.id])
-                            # print(compar)
 
-                            dict_mdata[message.id] = metadata_from_messages(message.id, compar, chanel_name, chanel_link)
-
-                            # if metadt:
-
-                            # metadata_list.append(metadt)
-
-
-
+                            dict_mdata[message.id] = metadata_from_messages(
+                                message.id, compar, chanel_name, chanel_link
+                            )
 
             else:
                 print(" No messages")
-
-    # print(dict_mdata)
 
     await client.disconnect()
 
@@ -72,5 +61,5 @@ async def main():
 
 
 if __name__ == "__main__":
-    # main()
+
     asyncio.run(main())

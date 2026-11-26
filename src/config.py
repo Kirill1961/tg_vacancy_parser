@@ -7,11 +7,7 @@ load_dotenv()
 API_ID = os.getenv("API_ID")
 API_HASH = os.getenv("API_HASH")
 
-print(API_ID, "<<<<<<<<<<<<<<<")
-
 CHANNELS = {
-    # "Мой канал": "@Kirill_50plus_DS",
-    # "Тёмная Башня": "@tbaudiobook",
     "Работа и вакансии в IT": "@proglib_jobs",
     "Доска AI-объявлений": "@DS_avitotech",
     "Вакансии ИТ": "@prog_itjobs",
@@ -29,33 +25,33 @@ CHANNELS = {
     "Ит Вакансии ": "@hr_itwork",
     "fFinder1": "@theyseeku",
     "fFinder2": "@finder",
-    "fFinder3": "@finderwork"
-
+    "fFinder3": "@finderwork",
 }
 
 PREF_METADATA = {
-    'VACANCY_NAME': ["datanalyst", "analys", "datas", "scientist", "data scientist", "аналит", "разраб"],
-    'GRADE': [
+    "VACANCY_NAME": [
+        "datanalyst",
+        "analys",
+        "datas",
+        "scientist",
+        "data scientist",
+        "аналит",
+        "разраб",
+    ],
+    "GRADE": [
         "jun",
         "intern",
         "стаже",
         "стажё",
         # "middle",
-        "стажир"
-    ]
-    , 'LOCATION': [
-        "удалён",
-        "remote",
-        "удален"
-    ]
-    , 'CHANNEL_NAME': []
-    , 'MESSAGE_DATE': []
-    , "ID": []
-
+        "стажир",
+    ],
+    "LOCATION": ["удалён", "remote", "удален"],
+    "CHANNEL_NAME": [],
+    "MESSAGE_DATE": [],
+    "ID": [],
 }
 
 SESSION_NAME = "vacancy_parser"
 
-# DB_PATH = Path("data/metadata.duckdb")
 DB_PATH = Path("C:/Users/Kirill/PycharmProjects/tg_vacancy_parser/data/metadata.duckdb")
-
